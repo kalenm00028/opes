@@ -5,6 +5,7 @@ var main = function() {
 		var showBlock = '.' + $(this).text().toLowerCase() + 'Block';
 		$('.block').children().removeClass('activeBlock');
 		$(showBlock).addClass('activeBlock');
+		$('.title').text($(this).text());
 	});
 }
 
