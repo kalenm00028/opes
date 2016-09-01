@@ -1,3 +1,4 @@
+/*Header stuff*/
 .header {
 	background-color: #ffffff;
 	border-bottom: 1px solid #ddd;
@@ -9,7 +10,7 @@
 	padding: 30px;
 }
 
-.header .title {
+.header .headerTitle {
 	margin-left: 100px;
 	font-size: 24pt;
 }
@@ -44,10 +45,12 @@
 	border-right: 1px solid #ddd;
 	background-color: #f2f2f2;
 }
+/*End Header stuff*/
 
+/*Blocks for each page*/
 .block {
 	background-color: #f2f2f2;
-	height: 83%;
+	height: 100%;
 	width: 100%;
 	position: absolute;
 }
@@ -83,7 +86,9 @@
 .activeBlock {
 	display: block;
 }
+/*End Blocks*/
 
+/*Footer*/
 .footer {
 	position: fixed;
     bottom: 0;
@@ -92,7 +97,9 @@
     background-color: #ffffff;
     border-top: 1px solid #ddd;
 }
+/*End footer*/
 
+/*Tenets*/
 .tenets {
 	font-family:'Satisfy',sans-seriff;
 	margin: auto;
@@ -107,9 +114,16 @@
 	font-style: italic;
 	font-size: 14pt;
 }
+/*End Tenets*/
 
+/*Calendar*/
+.calendarMonth {
+	display: none;
+}
 
-
+.calendarMonth.active {
+	display: block;
+}
 
 .month {
     padding: 70px 25px;
@@ -132,13 +146,23 @@
 .month .prev {
     float: left;
     padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 24pt;
+}
+
+.month .prev:hover {
+	cursor: pointer;
 }
 
 .month .next {
     float: right;
     padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 24pt;
+}
+
+.month .next:hover {
+	cursor: pointer;
 }
 
 .weekdays {
@@ -169,6 +193,7 @@
     margin-bottom: 5px;
     font-size:12px;
     color: #777;
+    margin-left: 3px;
 }
 
 .days li .dayNums:hover {
@@ -177,16 +202,22 @@
 	background-color: #ddd;
 }
 
-.days li .today {
-    padding: 5px;
-    background: #1abc9c;
-    color: white !important
+.days li .selected {
+	color: #777 !important;
+	padding: 5px;
+	background-color: #ddd !important;
 }
 
-.days li .selected {
+.days li .event {
+    padding: 5px;
+    background: #1abc9c;
+    color: white;
+}
+
+.days li .today {
 	padding: 5px;
-	cursor: pointer;
-	background-color: #ddd;
+    background: #1abc9c;
+    color: white;
 }
 
 @media screen and (max-width:720px) {
@@ -201,3 +232,34 @@
 @media screen and (max-width: 290px) {
     .weekdays li, .days li {width: 12.2%;}
 }
+
+.eventsList {
+	list-style: none;
+	padding-left: 0;
+}
+
+.event {
+	background-color: #eee;
+	border-top: 1px solid #ddd;
+	padding: 10px;
+	color: #777;
+}
+
+.eventsList li.event {
+	display: none;
+}
+
+.eventsList li.main {
+	display: block;
+	padding: 5px;
+	font-size: 16pt;
+	background-color: #ddd;
+	color: #777;
+	text-align: center;
+}
+
+.eventsList li.activeEvent {
+	display: block;
+}
+
+/*End Calendar*/

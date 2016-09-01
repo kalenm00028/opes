@@ -9,10 +9,10 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 			<script src="app.js"></script>
 	</head>
-	<body>
+	<body onload="setCalendar(new Date().getMonth(),new Date().getFullYear())">
 		<div class="header">
 			<img src="images/logo.jpeg" class="logo">
-			<span class="title">OPES</span>
+			<span class="headerTitle">OPES</span>
 			<br>
 			<ul class="navBar">
 				<li class="navButton active-navButton">Home</li>
@@ -50,7 +50,22 @@
 					<ul>
 				    	<li class="prev">&lsaquo;</li>
 						<li class="next">&rsaquo;</li>
-						<li style="text-align:center">August<br><span style="font-size:18px">2016</span></li>
+						<li style="text-align:center">
+							<span class="calendarMonth January">January</span>
+							<span class="calendarMonth February">February</span>
+							<span class="calendarMonth March">March</span>
+							<span class="calendarMonth April">April</span>
+							<span class="calendarMonth May">May</span>
+							<span class="calendarMonth June">June</span>
+							<span class="calendarMonth July">July</span>
+							<span class="calendarMonth August">August</span>
+							<span class="calendarMonth September">September</span>
+							<span class="calendarMonth October">October</span>
+							<span class="calendarMonth November">November</span>
+							<span class="calendarMonth December">December</span>
+							<br>
+							<span class="calendarYear" style="font-size:18px"></span>
+						</li>
 					</ul>
 				</div>
 
@@ -65,38 +80,12 @@
 				</ul>
 
 				<ul class="days">
-					<li><span class="dayNums"></span></li>
-					<li><span class="dayNums">1</span></li>
-					<li><span class="dayNums">2</span></li>
-					<li><span class="dayNums">3</span></li>
-					<li><span class="dayNums">4</span></li>
-					<li><span class="dayNums">5</span></li>
-					<li><span class="dayNums">6</span></li>
-					<li><span class="dayNums">7</span></li>
-					<li><span class="dayNums">8</span></li>
-					<li><span class="dayNums">9</span></li>
-					<li><span class="dayNums">10</span></li>
-					<li><span class="dayNums">11</span></li>
-					<li><span class="dayNums">12</span></li>
-					<li><span class="dayNums">13</span></li>
-					<li><span class="dayNums">14</span></li>
-					<li><span class="dayNums">15</span></li>
-					<li><span class="dayNums">16</span></li>
-					<li><span class="dayNums">17</span></li>
-					<li><span class="dayNums">18</span></li>
-					<li><span class="dayNums">19</span></li>
-					<li><span class="dayNums">20</span></li>
-					<li><span class="dayNums">21</span></li>
-					<li><span class="dayNums">22</span></li>
-					<li><span class="dayNums">23</span></li>
-					<li><span class="dayNums">24</span></li>
-					<li><span class="dayNums">25</span></li>
-					<li><span class="dayNums">26</span></li>
-					<li><span class="dayNums">27</span></li>
-					<li><span class="dayNums">28</span></li>
-					<li><span class="dayNums">29</span></li>
-					<li><span class="dayNums">30</span></li>
-					<li><span class="dayNums today">31</span></li>
+					
+				</ul>
+				<ul class="eventsList">
+					<li class="event main" style="text-align:center;">Events</li>
+					<li class="event August 25 2016">Woah, there's an event today</li>
+					<li class="event August 25 2016">It's just called Two Events</li>
 				</ul>
 			</div>
 			<div class="newsletterBlock">
